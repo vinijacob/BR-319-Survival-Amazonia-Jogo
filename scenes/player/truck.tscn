@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://csevxarb6ql1v"]
+
+[ext_resource type="Script" uid="uid://bonxp0ptfr1cc" path="res://scripts/player/Truck.cs" id="1_yneqd"]
+[ext_resource type="Texture2D" uid="uid://ejr7ibvxp68n" path="res://assets/images/truck.png" id="2_yneqd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yneqd"]
+radius = 82.0
+height = 532.0
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u7a4v"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_yneqd"]
+graph_offset = Vector2(-481, 170)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_u7a4v")
+nodes/StateMachine/position = Vector2(-40, 240)
+node_connections = [&"output", 0, &"StateMachine"]
+
+[node name="Truck" type="CharacterBody2D" unique_id=1153600885]
+script = ExtResource("1_yneqd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1762624907]
+rotation = 1.5707964
+texture = ExtResource("2_yneqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=474797077]
+shape = SubResource("CapsuleShape2D_yneqd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=140977554]
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1177543622]
+tree_root = SubResource("AnimationNodeBlendTree_yneqd")
+anim_player = NodePath("../AnimationPlayer")
