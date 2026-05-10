@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://csevxarb6ql1v"]
 
 [ext_resource type="Script" uid="uid://bonxp0ptfr1cc" path="res://scripts/player/Truck.cs" id="1_yneqd"]
-[ext_resource type="Texture2D" uid="uid://ejr7ibvxp68n" path="res://assets/images/truck.png" id="2_yneqd"]
+[ext_resource type="Texture2D" uid="uid://cus0nbdn80bsj" path="res://assets/sprites/truck/caminhão 2.png" id="2_xq3td"]
 [ext_resource type="Script" uid="uid://brav7yd2q72ao" path="res://scripts/player/FuelBar.cs" id="3_xq3td"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yneqd"]
-radius = 71.0
-height = 520.0
+radius = 4.0
+height = 26.0
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u7a4v"]
 
@@ -18,9 +18,12 @@ node_connections = [&"output", 0, &"StateMachine"]
 
 [node name="Truck" type="CharacterBody2D" unique_id=1153600885]
 script = ExtResource("1_yneqd")
+maxSpeed = 250.0
+acceleration = 400.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1762624907]
-texture = ExtResource("2_yneqd")
+rotation = -1.5707964
+texture = ExtResource("2_xq3td")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=474797077]
 rotation = 1.5707964

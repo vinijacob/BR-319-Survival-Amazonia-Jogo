@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bmimco54hus78"]
+
+[ext_resource type="Texture2D" uid="uid://bkv12bky8pvdf" path="res://assets/tiles/tilesets/Gasoline.png" id="1_5rfo3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7cts"]
+atlas = ExtResource("1_5rfo3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ruy"]
+atlas = ExtResource("1_5rfo3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv2ab"]
+atlas = ExtResource("1_5rfo3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chs8t"]
+atlas = ExtResource("1_5rfo3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojwny"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7cts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ruy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv2ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chs8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bios3"]
+radius = 3.0
+height = 10.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1305575034]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2079531813]
+sprite_frames = SubResource("SpriteFrames_ojwny")
+autoplay = "default"
+frame_progress = 0.96138436
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=987965593]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_bios3")

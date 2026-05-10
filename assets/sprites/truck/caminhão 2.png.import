@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3cky6bjd4c65"
-path="res://.godot/imported/RPG tileset (full) - 300%.png-f866262c67d5f03c7e5ef50478cf645c.ctex"
+uid="uid://cus0nbdn80bsj"
+path="res://.godot/imported/caminhão 2.png-1c9dfe39dc8e830c849e739227d4094f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/tilesets/RPG tileset (full) - 300%.png"
-dest_files=["res://.godot/imported/RPG tileset (full) - 300%.png-f866262c67d5f03c7e5ef50478cf645c.ctex"]
+source_file="res://assets/sprites/truck/caminhão 2.png"
+dest_files=["res://.godot/imported/caminhão 2.png-1c9dfe39dc8e830c849e739227d4094f.ctex"]
 
 [params]
 
