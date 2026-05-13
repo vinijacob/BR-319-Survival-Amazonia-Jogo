@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://crvi2g8l54gxn"]
+
+[ext_resource type="Script" uid="uid://c82q6lkff66jd" path="res://celular_ui.gd" id="1_lkdyg"]
+[ext_resource type="Texture2D" uid="uid://cfmmrer4vcut6" path="res://assets/arte/pngtree-cell-phone-mockup-png-image_6584021.png" id="2_200hq"]
+[ext_resource type="Texture2D" uid="uid://u50jgbwahqns" path="res://assets/arte/pngtree-siren-alarm-icon-png-image_1609902.png" id="3_200hq"]
+[ext_resource type="AudioStream" uid="uid://ck0cc6b340pfw" path="res://assets/audio/-alert_sound.mp3" id="3_p8wc6"]
+
+[node name="CelularUI" type="Control" unique_id=1804139487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lkdyg")
+
+[node name="FundoCelular" type="TextureRect" parent="." unique_id=1110944522]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 819.0
+offset_right = 304.0
+offset_bottom = 1311.0
+texture = ExtResource("2_200hq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextoAlerta" type="Label" parent="FundoCelular" unique_id=739073127]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 5.0
+offset_right = 205.0
+offset_bottom = 254.0
+text = " ALERTA DA DEFESA CIVIL: TROMBA D'ÁGUA NO KM 45! "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="sirene" type="TextureRect" parent="FundoCelular" unique_id=1187643830]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 159.0
+offset_right = 207.0
+offset_bottom = 196.0
+texture = ExtResource("3_200hq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Sirene" type="TextureRect" parent="FundoCelular" unique_id=1576146780]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.07300001
+anchor_bottom = 0.041
+offset_left = 88.0
+offset_top = 59.0
+offset_right = 115.998
+offset_bottom = 74.828
+texture = ExtResource("3_200hq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SomSirene" type="AudioStreamPlayer2D" parent="." unique_id=1621855026]
+stream = ExtResource("3_p8wc6")
+
+[node name="BotaoTeste" type="Button" parent="." unique_id=2147379297]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Testar Alerta
+"
+
+[connection signal="pressed" from="BotaoTeste" to="." method="_on_botao_teste_pressed"]

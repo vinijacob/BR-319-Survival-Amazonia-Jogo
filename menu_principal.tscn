@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cruqdaok25nsy"]
+
+[ext_resource type="Script" uid="uid://dpir20xihmcab" path="res://menu_principal.gd" id="1_kc3ii"]
+[ext_resource type="Texture2D" uid="uid://bkdufg0cyaykb" path="res://assets/arte/Captura de tela 2026-03-26 233709.png" id="2_v584w"]
+[ext_resource type="FontFile" uid="uid://dovmi4efx4ldk" path="res://fontes/PressStart2P.ttf" id="3_ul6ys"]
+
+[node name="MenuPrincipal" type="Control" unique_id=792785763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kc3ii")
+
+[node name="BR319" type="TextureRect" parent="." unique_id=1455252975]
+layout_mode = 0
+offset_left = -5.0
+offset_right = 1151.0
+offset_bottom = 831.0
+texture = ExtResource("2_v584w")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="." unique_id=1018960278]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 2.0
+offset_right = 1011.0
+offset_bottom = 228.0
+theme_override_colors/font_color = Color(0.9254902, 0.30588236, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.9607843, 0.33333334, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0.25882354, 0, 1)
+theme_override_fonts/font = ExtResource("3_ul6ys")
+theme_override_font_sizes/font_size = 72
+text = "BR-319 Survival"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CaixaBotoes" type="VBoxContainer" parent="." unique_id=1039261632]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.010000001
+anchor_right = -0.010000001
+offset_left = 409.52
+offset_top = 247.0
+offset_right = 665.52
+offset_bottom = 339.0
+
+[node name="BotaoJogar" type="Button" parent="CaixaBotoes" unique_id=1192290281]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "ACELERAR
+"
+
+[node name="BotaoSair" type="Button" parent="CaixaBotoes" unique_id=914981792]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_font_sizes/font_size = 25
+text = "SAIR DO JOGO
+"
+
+[connection signal="pressed" from="CaixaBotoes/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
+[connection signal="pressed" from="CaixaBotoes/BotaoSair" to="." method="_on_botao_sair_pressed"]

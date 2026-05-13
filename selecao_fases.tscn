@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cbty14biaqk5m"]
+
+[ext_resource type="Script" uid="uid://dw7gbjb58ykm4" path="res://selecao_fases.gd" id="1_cn31e"]
+[ext_resource type="FontFile" uid="uid://dovmi4efx4ldk" path="res://fontes/PressStart2P.ttf" id="2_2xn6k"]
+
+[node name="SelecaoFases" type="Control" unique_id=1268260760]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cn31e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1897299654]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=642619247]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 10.0
+offset_right = 993.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0.1254902, 0.76862746, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("2_2xn6k")
+theme_override_font_sizes/font_size = 64
+text = "Level Select
+"
+
+[node name="GradeFases" type="GridContainer" parent="." unique_id=432019057]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 272.0
+offset_right = 862.0
+offset_bottom = 347.0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="BotaoFase1" type="Button" parent="GradeFases" unique_id=359903375]
+layout_mode = 2
+text = "Saída de Manaus
+"
+
+[node name="BotaoFase2" type="Button" parent="GradeFases" unique_id=1185753384]
+layout_mode = 2
+text = "O Grande Atoleiro
+"
+
+[node name="BotaoFase3" type="Button" parent="GradeFases" unique_id=828890975]
+layout_mode = 2
+text = "De novo, esse alerta civil!!!"
+
+[node name="BotaoFase4" type="Button" parent="GradeFases" unique_id=1733910921]
+layout_mode = 2
+text = "Teleze
+"
+
+[node name="BotaoFase5" type="Button" parent="GradeFases" unique_id=1075896970]
+layout_mode = 2
+text = "Um dia me aposento
+"
+
+[node name="BotaoFase6" type="Button" parent="GradeFases" unique_id=454360159]
+layout_mode = 2
+text = "E esse buraco, meu prefeito?
+"
+
+[node name="Voltar" type="Button" parent="." unique_id=1913944112]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 76.0
+offset_bottom = 36.0
+text = "VOLTAR"
+
+[connection signal="pressed" from="GradeFases/BotaoFase1" to="." method="_on_botao_fase_1_pressed"]
+[connection signal="pressed" from="GradeFases/BotaoFase2" to="." method="_on_botao_fase_2_pressed"]
+[connection signal="pressed" from="GradeFases/BotaoFase3" to="." method="_on_botao_fase_3_pressed"]
+[connection signal="pressed" from="GradeFases/BotaoFase4" to="." method="_on_botao_fase_4_pressed"]
+[connection signal="pressed" from="GradeFases/BotaoFase5" to="." method="_on_botao_fase_5_pressed"]
+[connection signal="pressed" from="GradeFases/BotaoFase6" to="." method="_on_botao_fase_6_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://beawj4l2uuih6"]
+
+[ext_resource type="Script" uid="uid://cc2epww71olfy" path="res://menu_pause.gd" id="1_uxhf1"]
+
+[node name="MenuPause" type="CanvasLayer" unique_id=1673467948]
+process_mode = 3
+script = ExtResource("1_uxhf1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=415105096]
+offset_left = 3.0
+offset_right = 1155.0
+offset_bottom = 644.0
+color = Color(0.043137256, 0.043137256, 0.043137256, 0.39215687)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=516791652]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 266.0
+offset_right = 705.0
+offset_bottom = 321.0
+theme_override_font_sizes/font_size = 40
+text = "JOGO PAUSADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1375652028]
+offset_left = 418.0
+offset_top = 377.0
+offset_right = 737.0
+offset_bottom = 585.0
+theme_override_constants/separation = 10
+
+[node name="BotaoVoltar" type="Button" parent="VBoxContainer" unique_id=2114377086]
+layout_mode = 2
+text = "VOLTAR PRO BARRO
+
+"
+
+[node name="BotaoSair" type="Button" parent="VBoxContainer" unique_id=518831636]
+layout_mode = 2
+text = "DESISTIR (MENU PRINCIPAL)
+"
