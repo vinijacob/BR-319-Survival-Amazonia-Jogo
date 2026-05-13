@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://chvwq40crdrgo"]
+
+[ext_resource type="Texture2D" uid="uid://cf3keen8kluyt" path="res://assets/images/MainMenu.jpeg" id="1_8gy84"]
+[ext_resource type="Script" uid="uid://cvg7exobd2hpd" path="res://scripts/MenuUI/MainMenu.cs" id="1_ij7vn"]
+
+[node name="MainMenu" type="Control" unique_id=1561243871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ij7vn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1524354478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8gy84")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=510480808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1113900879]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 85
+text = "BR-319: SURVIVAL AMAZÔNIA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1105128440]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="StartBtn" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1772573875]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "Começar Jogo"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer" unique_id=719357949]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SettingsBtn" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1625123423]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Configurações"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=382654982]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Sair"
